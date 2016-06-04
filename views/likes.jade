@@ -1,0 +1,26 @@
+div.row
+  each post in posts
+    div(class="col-xs-12 col-sm-6 col-md-4 col-lg-3")
+      div.thumbnail
+        // pre=JSON.stringify(post, undefined, 2)
+        p.thumb-src="From "
+          a(href="http://"+post.blog_name+".tumblr.com", target="_blank")=post.blog_name
+        if post.type == 'photo' && post.hasOwnProperty('photos')
+          - var img_src = ""
+          each size in post.photos[0].alt_sizes
+            if size.width == 250
+              - img_src = size.url
+          
+          if img_src == ""
+            div.thumb-img(style="background-image: url('#{post.photos[0].alt_sizes[0].url}')")
+          else
+            div.thumb-img(style="background-image: url('#{img_src}')")  
+
+        else if post.type == 'video' && post.hasOwnProperty('player')
+          each size in post.player
+            if size.width == 250
+              span!= size.embed_code
+        
+        else if post.type = 'text'
+          h3=post.title
+          div.thumb-text=post.body

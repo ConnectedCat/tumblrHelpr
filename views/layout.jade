@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    block styles    
+      link(
+        rel='stylesheet',
+        href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+        integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7',
+        crossorigin='anonymous'      
+      )
+      link(rel='stylesheet', href='/stylesheets/style.css')
+    block scripts
+      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")    
+
+  body
+    div(class="container")
+      block content

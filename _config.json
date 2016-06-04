@@ -1,0 +1,20 @@
+{
+  "grant": {
+    "server": {
+      "protocol": "http",
+      "host": "localhost:3000"
+    },
+    "tumblr": {
+      "key": "YOUR_TUMBLR_APP_KEY",
+      "secret": "YOUR_TUMBLR_APP_SECRET",
+      "callback": "/handle_tumblr_callback"
+    }
+  },
+  "session": {
+    "session_secret": "SESSION_SECRET"
+  },
+  "tumblr_app": {
+    "tumblr_consumer_key": "YOUR_TUMBLR_APP_CONSUMER_KEY",
+    "tumblr_consumer_secret": "YOUR_TUMBLR_APP_CONSUMER_SECRET"
+  }
+}

@@ -1,0 +1,17 @@
+extends layout
+
+append scripts
+  script(src="/javascripts/main.js")
+
+block content
+  div.row
+    div(class="col-xs-12")
+      header(class="page-header")
+        h1=user.name
+        p="available blogs:"
+        each blog in user.blogs
+          p=blog.name
+
+  div.row.bottom-row
+    div(class="col-xs-12")
+      button(class="btn btn-info center-block js-more-likes")="Get more"

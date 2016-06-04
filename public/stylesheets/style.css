@@ -1,0 +1,19 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-bottom: 50px; }
+
+.thumbnail {
+  min-height: 325px; }
+
+div.thumb-img {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center top; }
+
+p.thumb-src {
+  position: absolute;
+  background-color: rgba(175, 175, 137, 0.8);
+  margin: 0px;
+  padding: 5px; }
+
+/*# sourceMappingURL=style.css.map */
